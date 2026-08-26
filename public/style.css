@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    padding: 3rem 1.5rem;
+    padding: 1rem;
     background: var(--background);
     color: var(--foreground);
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -19,7 +19,7 @@ main {
 }
 
 header pre {
-    margin: 0 0 1rem;
+    margin: 0 0 0.5rem;
     white-space: pre;
     line-height: 1;
     letter-spacing: 0;
@@ -28,7 +28,7 @@ header pre {
 }
 
 nav {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 a {
@@ -48,14 +48,27 @@ article h1 {
 
 article time {
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
 }
 
 article h2,
 article h3,
 article h4 {
-    margin-top: 2rem;
+    margin: 1.25rem 0 0.5rem;
     font-size: 1rem;
+}
+
+article p,
+article ul,
+article ol,
+article pre,
+article blockquote {
+    margin: 0 0 0.75rem;
+}
+
+article ul,
+article ol {
+    padding-left: 1.5rem;
 }
 
 article pre,
@@ -67,19 +80,16 @@ article pre {
     overflow-x: auto;
 }
 
-blockquote {
-    margin-left: 0;
-    padding-left: 1rem;
+article blockquote {
+    padding-left: 0.75rem;
     border-left: 1px solid var(--foreground);
+}
+
+article blockquote p {
+    margin-bottom: 0;
 }
 
 img {
     max-width: 100%;
     height: auto;
-}
-
-@media (max-width: 36rem) {
-    body {
-        padding: 2rem 1rem;
-    }
 }
