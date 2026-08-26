@@ -1,26 +1,46 @@
-# Minimal Python Static Blog Generator
+# Minimal Python Static Blog
 
-A small Markdown-to-HTML generator for a personal blog. It has no frontend tooling, JavaScript, templates, or framework.
+A small Markdown blog generator with no frontend tooling, JavaScript, templates, or framework.
 
-## Use
+## Structure
 
-Create and activate a virtual environment, then install the two dependencies:
+- `build.py` contains the site settings and generator.
+- `articles/` contains Markdown articles with `title`, `date`, and `slug` frontmatter.
+- `about.md` supplies the About page.
+- `images/` is copied unchanged to `public/images/`.
+- `public/` is disposable generated output.
+
+## Build locally
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
 python build.py
 ```
 
-On Windows PowerShell, activate it with:
+Preview `public/` with any static-file server, for example:
 
-```powershell
-.venv\Scripts\Activate.ps1
+```bash
+python -m http.server --directory public
 ```
 
-Edit `SITE_TITLE`, `SITE_TITLE_ART`, and `SITE_URL` at the top of `build.py`. `SITE_TITLE_ART` is rendered unchanged inside a `<pre>` element, so it can contain Unicode terminal artwork.
+## Content
 
-Add articles as Markdown files in `articles/`, with `title`, `date`, and `slug` frontmatter fields. Add unprocessed image files to `images/` and reference them in Markdown as `/images/filename.jpg`.
+Edit `SITE_TITLE`, `SITE_TITLE_ART`, and `SITE_URL` in `build.py`. The title art is preserved in a `<pre>` element.
 
-Run `python build.py` whenever content changes, then inspect the regenerated `public/` directory. It is disposable: every build removes and recreates it.
+Add an article to `articles/`:
+
+```markdown
+---
+title: Article title
+date: 2026-08-26
+slug: article-title
+---
+
+Article text.
+```
+
+Put images in `images/` and use paths such as `/images/photo.jpg` in Markdown.
+
+## Deployment
+
+Vercel runs `python build.py` and serves `public/`.

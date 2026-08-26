@@ -18,7 +18,7 @@ main {
     margin: 0 auto;
 }
 
-.site-title {
+header pre {
     margin: 0 0 1rem;
     white-space: pre;
     line-height: 1;
@@ -36,7 +36,7 @@ a {
     text-decoration: underline;
 }
 
-.article-list p {
+main > p {
     margin: 0 0 2rem;
 }
 
@@ -46,8 +46,9 @@ article h1 {
     font-weight: normal;
 }
 
-.date {
-    margin: 0 0 2rem;
+article time {
+    display: block;
+    margin-bottom: 2rem;
 }
 
 article h2,

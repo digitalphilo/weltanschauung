@@ -1,7 +1,5 @@
 """Build this blog into the disposable public/ directory."""
 
-from __future__ import annotations
-
 import html
 import re
 import shutil
@@ -35,7 +33,6 @@ class Article:
     published: date
     slug: str
     body: str
-    source: Path
 
 
 def fail(source: Path, message: str) -> ValueError:
@@ -43,7 +40,6 @@ def fail(source: Path, message: str) -> ValueError:
 
 
 def parse_markdown_file(path: Path) -> tuple[dict, str]:
-    """Read YAML frontmatter followed by a Markdown body."""
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n"):
         raise fail(path, "missing YAML frontmatter (expected opening ---)")
@@ -80,11 +76,11 @@ def parse_article(path: Path) -> Article:
     slug = str(metadata["slug"])
     if not SLUG_PATTERN.fullmatch(slug):
         raise fail(path, "slug must use lowercase letters, numbers, and hyphens")
-    return Article(title, published, slug, body, path)
+    return Article(title, published, slug, body)
 
 
 def markdown_to_html(source: str) -> str:
-    return markdown.markdown(source, extensions=["fenced_code", "sane_lists"])
+    return markdown.markdown(source, extensions=["fenced_code"])
 
 
 def date_display(value: date) -> str:
@@ -92,7 +88,6 @@ def date_display(value: date) -> str:
 
 
 def page_shell(title: str, content: str) -> str:
-    """Wrap already-rendered HTML content in the site's shared page chrome."""
     site_title = html.escape(SITE_TITLE)
     title_art = html.escape(SITE_TITLE_ART)
     return f"""<!doctype html>
@@ -107,10 +102,10 @@ def page_shell(title: str, content: str) -> str:
 <body>
     <main>
         <header>
-            <pre class="site-title">{title_art}</pre>
+            <pre>{title_art}</pre>
             <nav><a href="/">Home</a>  <a href="/about.html">About</a></nav>
         </header>
-        {content}
+{content}
     </main>
 </body>
 </html>
@@ -125,20 +120,18 @@ def write_page(relative_path: Path, title: str, content: str) -> None:
 
 def render_index(articles: list[Article]) -> None:
     entries = "\n".join(
-        f'            <p><a href="/articles/{html.escape(article.slug)}.html">'
+        f'        <p><a href="/articles/{html.escape(article.slug)}.html">'
         f"{html.escape(article.title)}</a> - {date_display(article.published)}</p>"
         for article in articles
     )
-    write_page(Path("index.html"), SITE_TITLE, f"""        <section class="article-list">
-{entries}
-        </section>""")
+    write_page(Path("index.html"), SITE_TITLE, entries)
 
 
 def render_article(article: Article) -> None:
     content = markdown_to_html(article.body)
     write_page(Path("articles") / f"{article.slug}.html", article.title, f"""        <article>
             <h1>{html.escape(article.title)}</h1>
-            <p class="date">{date_display(article.published)}</p>
+            <time datetime="{article.published.isoformat()}">{date_display(article.published)}</time>
             {content}
         </article>""")
 
@@ -183,12 +176,6 @@ def generate_rss(articles: list[Article]) -> None:
     (OUTPUT_DIR / "rss.xml").write_text(feed, encoding="utf-8")
 
 
-def copy_assets() -> None:
-    shutil.copy2(ROOT / "style.css", OUTPUT_DIR / "style.css")
-    if IMAGES_DIR.exists():
-        shutil.copytree(IMAGES_DIR, OUTPUT_DIR / "images")
-
-
 def build() -> None:
     if not ARTICLES_DIR.is_dir():
         raise FileNotFoundError(f"articles directory not found: {ARTICLES_DIR}")
@@ -202,7 +189,9 @@ def build() -> None:
         raise ValueError("article slugs must be unique")
     articles.sort(key=lambda article: article.published, reverse=True)
 
-    copy_assets()
+    shutil.copy2(ROOT / "style.css", OUTPUT_DIR / "style.css")
+    if IMAGES_DIR.exists():
+        shutil.copytree(IMAGES_DIR, OUTPUT_DIR / "images")
     render_index(articles)
     for article in articles:
         render_article(article)
