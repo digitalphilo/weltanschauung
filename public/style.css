@@ -2,8 +2,9 @@
     --base: #2C313C;
     --text: #9FB2BF;
     --green: #a6d189;
-    --peach: #ef9f76;
-    --mauve: #ca9ee6;
+    --title: #5d96cb;
+    --italic: #86aa84;
+    --bold: #c8655f;
     --sky: #99d1db;
 }
 
@@ -58,15 +59,15 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--green);
+    color: var(--title);
 }
 
 em {
-    color: var(--peach);
+    color: var(--italic);
 }
 
 strong {
-    color: var(--mauve);
+    color: var(--bold);
 }
 
 main > p {
