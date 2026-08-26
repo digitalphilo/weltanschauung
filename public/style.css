@@ -1,6 +1,6 @@
 :root {
-    --base: #303446;
-    --text: #c6d0f5;
+    --base: #2C313C;
+    --text: #9FB2BF;
     --green: #a6d189;
     --peach: #ef9f76;
     --mauve: #ca9ee6;
@@ -34,7 +34,7 @@ header pre {
 }
 
 nav {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.1rem;
 }
 
 a {
@@ -64,7 +64,7 @@ strong {
 }
 
 main > p {
-    margin: 0 0 2rem;
+    margin: 0 0 0.5em;
 }
 
 article h1 {
