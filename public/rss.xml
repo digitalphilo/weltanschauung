@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>My Blog</title>
+    <link>https://example.com/</link>
+    <description>My Blog</description>
+    <item>
+      <title>My first article</title>
+      <link>https://example.com/articles/my-first-article.html</link>
+      <guid>https://example.com/articles/my-first-article.html</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;This is the first entry on the blog. It is written in plain Markdown.&lt;/p&gt;
+&lt;p&gt;You can write &lt;a href="https://example.com"&gt;ordinary links&lt;/a&gt;, &lt;em&gt;emphasis&lt;/em&gt;, and &lt;code&gt;inline code&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="An example image" src="/images/example.jpg" /&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Notes from the terminal</title>
+      <link>https://example.com/articles/notes-from-the-terminal.html</link>
+      <guid>https://example.com/articles/notes-from-the-terminal.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;The site is deliberately simple.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A small page is easier to keep alive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Markdown files are the source.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;public/&lt;/code&gt; directory is the output.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class="language-text"&gt;python build.py
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>
