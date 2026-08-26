@@ -1,6 +1,10 @@
 :root {
     --background: #385063;
     --foreground: #8ac4d4;
+    --green: #a6d189;
+    --peach: #ef9f76;
+    --mauve: #ca9ee6;
+    --sky: #99d1db;
 }
 
 body {
@@ -34,6 +38,27 @@ nav {
 a {
     color: var(--foreground);
     text-decoration: underline;
+}
+
+a:hover {
+    color: var(--sky);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--green);
+}
+
+em {
+    color: var(--peach);
+}
+
+strong {
+    color: var(--mauve);
 }
 
 main > p {
