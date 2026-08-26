@@ -15,7 +15,7 @@ import yaml
 
 # Edit these values for your own site.
 SITE_TITLE = "Weltanschauung"
-SITE_URL = "rauweltanschauung.com"
+SITE_URL = "SITE_URL = "https://rauweltanschauung.com""
 SITE_TITLE_ART = r""" 
        __     __     ______     __         ______   ______     __   __                        
       /\ \  _ \ \   /\  ___\   /\ \       /\__  _\ /\  __ \   /\ "-.\ \                       
