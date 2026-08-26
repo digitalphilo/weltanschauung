@@ -1,0 +1,84 @@
+:root {
+    --background: #385063;
+    --foreground: #8ac4d4;
+}
+
+body {
+    margin: 0;
+    padding: 3rem 1.5rem;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 46rem;
+    margin: 0 auto;
+}
+
+.site-title {
+    margin: 0 0 1rem;
+    white-space: pre;
+    line-height: 1;
+    letter-spacing: 0;
+    font-variant-ligatures: none;
+    font-family: inherit;
+}
+
+nav {
+    margin-bottom: 3rem;
+}
+
+a {
+    color: var(--foreground);
+    text-decoration: underline;
+}
+
+.article-list p {
+    margin: 0 0 2rem;
+}
+
+article h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.date {
+    margin: 0 0 2rem;
+}
+
+article h2,
+article h3,
+article h4 {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+article pre,
+article code {
+    font-family: inherit;
+}
+
+article pre {
+    overflow-x: auto;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 1rem;
+    border-left: 1px solid var(--foreground);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 36rem) {
+    body {
+        padding: 2rem 1rem;
+    }
+}
