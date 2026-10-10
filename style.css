@@ -33,23 +33,15 @@ header pre {
 
 .site-title {
     width: max-content;
-    max-width: 100%;
     position: relative;
     left: 50%;
-    overflow-x: visible;
     transform: translateX(-50%);
-    font-size: clamp(5px, 0.5vw, 7.8px);
-}
-
-@media (max-width: 500px) {
-    .site-title {
-        max-width: calc(100vw - 2rem);
-        overflow-x: auto;
-        font-size: clamp(4px, 1.55vw, 5px);
-    }
+    font-size: min(1.5rem, calc((100vw - 2rem) * 0.01773));
 }
 
 nav {
+    display: flex;
+    gap: 0.75rem;
     margin-bottom: 3.1rem;
 }
 
