@@ -1,15 +1,13 @@
 ---
-title: Il s’agit pour moi d’être plus qu’un homme.
+title: "Il s’agit pour moi d’être plus qu’un homme."
 date: 2026-09-07
 slug: l-oeuvre-au-noir
 ---
 
-# “Il s’agit pour moi d’être plus qu’un homme.”
-
 Most of my reading list is constituted of chance encounters. What prompted me to read Yourcenar’s *magnum opus* is no different. I first discovered the *Memoirs of Hadrian* when browsing the blog of a person I admire much, especially due to their intellectual range. The second omen was Joanna Biggs’ LRB piece on the *Immortelle*, a welcome sign to start reading her works at the earliest opportunity. I stepped into the breach during the vacant summer of 2025. Then, just last month, I finished *The Abyss*. Here are my verbose thoughts.
 
 
-![James Nasmyth's An Alchemist in His Laboratory (1843)](AlchemistNasmyth.jpg "James Nasmyth's An Alchemist in His Laboratory (1843)")
+![James Nasmyth's An Alchemist in His Laboratory (1843)](/images/AlchemistNasmyth.jpg "James Nasmyth's An Alchemist in His Laboratory (1843)")
 
 
 ## Marguerite de Crayencour
