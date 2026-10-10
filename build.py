@@ -111,11 +111,11 @@ def page_shell(title: str, content: str) -> str:
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
 </head>
 <body>
+    <header>
+        <pre class="site-title">{title_art}</pre>
+        <nav><a href="/">Home</a>  <a href="/about.html">About</a></nav>
+    </header>
     <main>
-        <header>
-            <pre class="site-title">{title_art}</pre>
-            <nav><a href="/">Home</a>  <a href="/about.html">About</a></nav>
-        </header>
 {content}
     </main>
 </body>

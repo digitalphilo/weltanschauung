@@ -32,14 +32,14 @@ header pre {
 }
 
 .site-title {
-    width: max-content;
-    position: relative;
-    left: calc(50% + (100vw - 100%) / 2);
-    transform: translateX(-50%);
-    font-size: min(1.35rem, calc((100vw - 2rem) * 0.015957));
+    width: fit-content;
+    margin-inline: auto;
+    font-size: min(1.215rem, calc((100vw - 2rem) * 0.0143613));
 }
 
 nav {
+    width: min(100%, 46rem);
+    margin-inline: auto;
     display: flex;
     gap: 0.75rem;
     margin-bottom: 2rem;
