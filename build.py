@@ -113,7 +113,7 @@ def page_shell(title: str, content: str) -> str:
 <body>
     <main>
         <header>
-            <pre>{title_art}</pre>
+            <pre class="site-title">{title_art}</pre>
             <nav><a href="/">Home</a>  <a href="/about.html">About</a></nav>
         </header>
 {content}

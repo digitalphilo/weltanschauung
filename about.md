@@ -3,12 +3,10 @@ title: About
 ---
 
 
-Blog about interests of mine and that of others. Each world-view is ever-changing and it will be reflected in the contents of the articles.
+These pages were created in an effort to create, after consuming for so long. Pieces are about my interests and others people's - do expect guest papers. Needless to say, no LLMs were used in the composition of the articles; not even to correct them. Thus, typos and poor syntax are also to be expected.
 
-I love getting email, please feel free to start a discussion at 322 at rauweltanschauung dot com
+I love getting email, contact me at 322 at rauweltanschauung dot com
 
-« connais-toi toi-même »
+« Connais-toi toi-même »
 
-Respectueusement,
-
-J.G
+J.G.
