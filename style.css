@@ -34,15 +34,16 @@ header pre {
 .site-title {
     width: max-content;
     position: relative;
-    left: 50%;
+    left: calc(50% + (100vw - 100%) / 2);
     transform: translateX(-50%);
-    font-size: min(1.5rem, calc((100vw - 2rem) * 0.01773));
+    font-size: min(1.35rem, calc((100vw - 2rem) * 0.015957));
 }
 
 nav {
     display: flex;
     gap: 0.75rem;
-    margin-bottom: 3.1rem;
+    margin-bottom: 2rem;
+    font-size: 18px;
 }
 
 a,
